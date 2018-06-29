@@ -1,0 +1,82 @@
+<html>
+<head><title>★말하는 신기한 액자★</title>
+
+<meta charset="UTF-8">
+
+<link type="text/css" rel="stylesheet" href="qtip/jquery.qtip.css">
+<link rel="stylesheet" href="animsition.min.css">
+<link rel="stylesheet" href="tt.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="qtip/jquery.qtip.js"></script>
+<script type="text/javascript" src="qtip/jquery.imagesloaded.pkg.min.js"></script>
+<script src="animsition.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("img").each(function(index, element) {
+        var link = $(this);
+        $(link).qtip({
+            content: link.attr("alt"), 
+            style: {
+                classes: 'qtip-tipsy qtip-shadow'
+            },   
+            position: {
+                target: 'mouse',
+                adjust: {
+                    mouse: true,
+					x: 15,
+					y: 20
+                }
+            }
+        });
+    });
+	$(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+</head>
+<body class="animsition">
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td></td></tr>
+<tr><td align="center" valign="middle" style="height: 550px;">
+<img src="nabi.png" border="0" title="나비인 척 하는 달빵: 두번째니까 인사는 생략할게요. 어느덧 구절고의 담력시험도 중반을 넘어섰습니다. 여기까지 오느라 고생 많으셨습니다(정말로) 앞으로 남은 반절도 즐겨주세요. 잠을 세시간자고 작업했더니 스토리 문구를 뭐라고 썼는지 기억이 안나네요 두서없어보였다면 이 자리를 빌어 사과드립니다 주룩 음 심장 놀라는건... 저도 작업하면서 벌렁벌렁했기 때문에 쌤썜으로 치는걸로...(진짜 아무말한다)">
+<img src="papazizi.png" border="0" title="(낯익은 목소리): 두번째 후일담 공간을 발견했구만! 자네도 참 눈썰미가 좋은 사람이야 홀홀홀~ 그럼 쉬었다 가게나~">
+<img src="sukja.png" border="0" title="숙자 뒤 찰빵: dks안녕하세요 저는 찰빵이에요. 그래도 예의바르게 인사했어요 찰빵 짱~~~ 구절고 담력시험 재밌게 하시고 계신가요???앞서 말했듯이 달빵님이랑 열심히 계획했는데 역시 목숨을 믹서기로 가는짓이었어요. 근데 하다보니까 재밌는것같아요..저는 그게 좋아요 그거 도서실에 책 이름 잔뜩 적혀있는거. 달빵님이 다 입력하신거지만(찰빵이하는거:이거해줘ㅠ우애애) 저 뭐 사실 저도 이거 언제지 저요 일어난지 약...20간정도가 넘어가고있어요 그리고 저 아마 두시간 자면 또 일어날거에요 괜찮아요 저희는 영자니까 그리고 그 놀라는거요 그거 찰빵 하도 테스트하느라 면역됐는데 또 보면 놀라서 간 두쪽으로 쪼개질거에요....재밌죠..?재밌으면 좋겠어요 저희 ㅔ스트하면서 재밌었던것같아요<br>
+그리고 저희 이제 자러가야해요">
+</td>
+</tr>
+<tr><td align="center" style="height:32px;">
+<table width="500" style="background-color: rgba(255,255,255,0.25); border-radius: 10px; border: 1px soild #cecece;">
+<tr><td align="center">
+<a href="#" onclick="window.history.back();return false;">(◀ 돌아가기)</a>
+</td></tr>
+</table>
+</td></tr>
+<tr><td><audio controls autoplay loop style="display: none;">
+  <source src="wham.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio></td></tr>
+</table>
+</body>
+</html>

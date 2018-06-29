@@ -1,0 +1,79 @@
+<html>
+<head><title>Thank You</title>
+
+<meta charset="UTF-8">
+
+<link type="text/css" rel="stylesheet" href="qtip/jquery.qtip.css">
+<link rel="stylesheet" href="animsition.min.css">
+<link rel="stylesheet" href="tt.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="qtip/jquery.qtip.js"></script>
+<script type="text/javascript" src="qtip/jquery.imagesloaded.pkg.min.js"></script>
+<script src="animsition.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("span").each(function(index, element) {
+        var link = $(this);
+        $(link).qtip({
+            content: link.attr("alt"), 
+            style: {
+                classes: 'qtip-tipsy qtip-shadow'
+            },   
+            position: {
+                target: 'mouse',
+                adjust: {
+                    mouse: true,
+					x: 15,
+					y: 20
+                }
+            }
+        });
+    });
+	$(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+</head>
+<body class="animsition">
+<table width="90%" height="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr><td></td></tr>
+<tr><td align="right" valign="top" style="height: 550px;">
+<img src="photo.jpg" border="0">
+</td>
+<td align="center" style="height:32px;">
+해당 포인트 앤 클릭 형식 미궁 게임은 2016년 초 엔딩을 맞이한 '구절초 질 무렵'의 엔딩기념 패러렐 이벤트용 게임으로,<br>
+게임 클리어 후 자유비툴란으로 연결되도록 설정되어있었으나 백업하는 과정에서 본 페이지로 대처하게 되었음을 알립니다.<br>
+플레이해주셔서 감사합니다!(* 최종 점검일자: 2018年 2月 2日)<br><br>
+배경 이미지 및 퍼즐 디자인: 찰빵님 / 페이지 구성/편집 및 웹코딩: DR<br>
+<a onclick="this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';" href="javascript:void(0)"> 
+<b>사용된 배경음악들</b>
+</a><div style="DISPLAY: none">
+<img src="bglist.jpg">
+</div>
+</td></tr>
+<tr><td></td></tr>
+</table>
+</body>
+</html>

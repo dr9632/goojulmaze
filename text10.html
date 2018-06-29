@@ -1,0 +1,73 @@
+<html>
+<head><title>No matter what</title>
+
+<meta charset="UTF-8">
+
+<link type="text/css" rel="stylesheet" href="qtip/jquery.qtip.css">
+<link rel="stylesheet" href="animsition.min.css">
+<link rel="stylesheet" href="tt.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="qtip/jquery.qtip.js"></script>
+<script type="text/javascript" src="qtip/jquery.imagesloaded.pkg.min.js"></script>
+<script src="animsition.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("area").each(function(index, element) {
+        var link = $(this);
+        $(link).qtip({
+            content: link.attr("alt"), 
+            style: {
+                classes: 'qtip-tipsy qtip-shadow'
+            },   
+            position: {
+                target: 'mouse',
+                adjust: {
+                    mouse: true,
+					x: 15,
+					y: 20
+                }
+            }
+        });
+    });
+	$(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+</head>
+<body class="animsition">
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td></td></tr>
+<tr><td align="center" valign="middle" style="height: 550px;">
+<a href="666c6f776572424c45535332.html"><img src="t10.png" border="0"></a>
+</td>
+</tr>
+<tr><td align="center" style="height:32px;">
+
+</td></tr>
+<tr><td>
+</td></tr>
+</table>
+</body>
+</html>

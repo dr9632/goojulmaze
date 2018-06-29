@@ -1,0 +1,136 @@
+<html>
+<head><title>도서관</title>
+
+<meta charset="UTF-8">
+
+<link type="text/css" rel="stylesheet" href="qtip/jquery.qtip.css">
+<link rel="stylesheet" href="tt.css">
+<link rel="stylesheet" href="animsition.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="qtip/jquery.qtip.js"></script>
+<script type="text/javascript" src="qtip/jquery.imagesloaded.pkg.min.js"></script>
+<script src="animsition.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("area").each(function(index, element) {
+        var link = $(this);
+        $(link).qtip({
+            content: link.attr("alt"), 
+            style: {
+                classes: 'qtip-tipsy qtip-shadow'
+            },   
+            position: {
+                target: 'mouse',
+                adjust: {
+                    mouse: true,
+					x: 15,
+					y: 20
+                }
+            }
+        });
+    });
+
+	$(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+</head>
+<body class="animsition">
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td align="center" valign="bottom">
+</td></tr>
+<tr><td align="center" valign="middle" style="height: 550px;">
+<img src="4l-2.png" border="0" usemap="#Map">
+<map name="Map">
+  <area shape="rect" coords="394,3,567,308" href="424f4f4b776f726d4c6f7735.html" title="▲앞으로">
+  <area shape="poly" coords="702,270,698,372,737,416,735,286" title="하지만 그 전에, 넌 꽤 똑똑한 것 같으니까 날 먼저 도와줘. 책장 안에서 <어르신의 99가지 메뉴>를 찾아 답을 알려줄래?">
+  <area shape="rect" coords="60,191,80,391" title="구절고의 역사에 대하여">
+  <area shape="rect" coords="160,190,174,336" title="산채로 만드는 99가지 식탁">
+  <area shape="rect" coords="153,397,170,546" title="구절포터와 온천수의 잔">
+  <area shape="rect" coords="211,167,228,289" title="Noir ~the GOOJUL~">
+  <area shape="rect" coords="234,4,251,119" title="산을 여행하는 등산객을 위한 안내서">
+  <area shape="rect" coords="270,143,285,260" title="0406">
+  <area shape="rect" coords="295,4,306,112" title="사고기록 제 210698-7호">
+  <area shape="rect" coords="133,4,155,117" title="그 많던 쌀가마니를 누가 옮겼을까">
+  <area shape="rect" coords="85,6,101,112" title="한방차 마스터! 당신도 2주 만에 할 수 있다!">
+  <area shape="rect" coords="217,355,230,484" title="미술해부학">
+  <area shape="rect" coords="262,298,278,401" title="구절의 지배자">
+  <area shape="rect" coords="286,270,300,372" title="온천수 앨범(초판본)">
+  <area shape="rect" coords="320,162,340,219" title="파란 만쥬의 숲">
+  <area shape="rect" coords="740,44,757,160" title="기타리스트 지지 전설(올컬러)">
+  <area shape="rect" coords="760,42,778,159" title="낯선 마을에 간칙한 추억 한조각">
+  <area shape="rect" coords="687,65,701,151" title="환자차트. 누구의 차트인지는 알아볼 수 없다.">
+  <area shape="rect" coords="653,77,666,150" title="나비가 있는 풍경">
+  <area shape="rect" coords="852,14,879,174" title="은밀한 서랍장: 능력 모으는 소녀 이야기">
+  <area shape="rect" coords="822,208,841,338" title="숙자보감">
+  <area shape="rect" coords="764,184,781,302" title="산지기">
+  <area shape="rect" coords="698,177,713,265" title="해바라기가 피지 않는 여름">
+  <area shape="rect" coords="658,252,668,336" title="마지막 잎새">
+  <area shape="rect" coords="774,335,789,452" title="지하실의 버스">
+  <area shape="rect" coords="850,397,873,545" title="나비납치사건">
+  <area shape="rect" coords="850,212,874,357" title="날개도둑">
+  <area shape="rect" coords="752,482,774,547" title="잠에 빠진 아이들">
+  <area shape="rect" coords="700,407,723,502" title="14:30">
+  <area shape="rect" coords="674,373,690,465" title="원더상인">
+  <area shape="rect" coords="658,346,665,433" title="달콤한 떡국">
+  <area shape="rect" coords="238,486,257,548" title="더 땅갑">
+  <area shape="rect" coords="273,412,289,496" title="그 해의 4월은 여느 4월보다도 길었다">
+  <area shape="rect" coords="330,353,343,427" title="강 건너기">
+  <area shape="rect" coords="314,471,333,547" title="도깨비 조사관">
+  <area shape="rect" coords="642,159,657,226" title="9990개의 버섯">
+  <area shape="rect" coords="808,26,826,168" title="수상한 약과 이야기">
+  <area shape="rect" coords="321,257,330,332" title="신경학개론">
+  <area shape="rect" coords="258,456,271,534" href="424f4f4b7368656c663130.html" title="어르신의 99가지 메뉴">
+  <area shape="rect" coords="926,186,956,412" title="무의식의 세계">
+  <area shape="rect" coords="906,463,933,545" title="산신들의 만찬">
+  <area shape="rect" coords="714,181,732,271" title="펼쳐지지 않는 책. 진짜 안 펼쳐지는게 아니라 책 제목이 이렇다.">
+  <area shape="rect" coords="708,57,726,156" title="산짐승을 부르는 아이 이야기">
+  <area shape="rect" coords="930,5,957,128" title="잊혀진 기억">
+  <area shape="rect" coords="810,362,831,497" title="붉은궤적">
+  <area shape="rect" coords="735,187,750,280" title="겨울의 마니또">
+  <area shape="rect" coords="674,271,694,354" title="꿈 속의 학교">
+  <area shape="rect" coords="4,133,54,407" title="가장 조용한 죽음">
+  <area shape="rect" coords="127,196,151,358" title="겨울이 끝났다">
+  <area shape="rect" coords="135,405,148,546" title="우리들의 봄">
+  <area shape="rect" coords="76,445,113,544" title="검은 안개가 드리우는 밤에">
+  <area shape="rect" coords="26,493,70,544" title="가진오">
+  <area shape="rect" coords="299,139,316,223" title="까마귀의 남자">
+  <area shape="rect" coords="319,32,335,110" title="오색강정러브">
+  <area shape="rect" coords="263,8,285,110" title="평행선을 향하다">
+  <area shape="rect" coords="58,6,84,110" title="어느 날 내가 죽었습니다">
+  <area shape="rect" coords="24,5,51,108" title="3개월 후 나에게">
+  <area shape="rect" coords="662,467,674,539" title="박복의 슬픈 기록: 이것은 전부 실화입니다. 믿을 수 없지만 뉴욕 베스트셀러라고 한다...">
+  <area shape="rect" coords="644,438,660,518" title="너를 기억할게">
+  <area shape="rect" coords="670,166,677,246" title="음력 삼월의 잿가루">
+  <area shape="rect" coords="877,216,901,385" title="(흐려서 읽을 수 없다)세에 부자가 된 요괴 이야기~인생은 한방~">
+</map>
+</td>
+</tr>
+<tr><td align="center" style="height:32px;">
+</td></tr>
+<tr><td></td></tr>
+</table>
+</body>
+</html>

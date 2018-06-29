@@ -1,0 +1,8 @@
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+body, table, tr, td, div {font-family: "Nanum Gothic"; font-size: 10pt; color: #cecece;}
+body {background-color: #000;}
+
+a:link {color: cecece; text-decoration: none; }
+a:visited {color: cecece; text-decoration: none; }
+a:active {color: cecece; text-decoration: none; }
+a:hover {color: cecece; text-decoration: none; }

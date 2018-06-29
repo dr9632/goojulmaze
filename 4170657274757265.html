@@ -1,0 +1,82 @@
+<html>
+<head><title>과학실</title>
+
+<meta charset="UTF-8">
+
+<link type="text/css" rel="stylesheet" href="qtip/jquery.qtip.css">
+<link rel="stylesheet" href="tt.css">
+<link rel="stylesheet" href="animsition.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="qtip/jquery.qtip.js"></script>
+<script type="text/javascript" src="qtip/jquery.imagesloaded.pkg.min.js"></script>
+<script src="animsition.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("area").each(function(index, element) {
+        var link = $(this);
+        $(link).qtip({
+            content: link.attr("alt"), 
+            style: {
+                classes: 'qtip-tipsy qtip-shadow'
+            },   
+            position: {
+                target: 'mouse',
+                adjust: {
+                    mouse: true,
+					x: 15,
+					y: 20
+                }
+            }
+        });
+    });
+
+	$(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+</head>
+<body class="animsition">
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td></td></tr>
+<tr><td align="center" valign="middle" style="height: 550px;">
+  <img src="6.png" border="0" usemap="#Map">
+ <map name="Map">
+  <area shape="rect" coords="291,3,330,253" title="(잠겨있다. 여분 열쇠는 과학실 창고 안에 있을 것이다.)">
+  <area shape="rect" coords="908,3,956,281" href="7765646f776861757765646f.html" title="과학실 창고로 들어가는 문이다.">
+  <area shape="circle" coords="158,82,23" title="시계는... 여전히 새벽 세시를 가르키고 있다. 모든 학교 시계의 건전지가 나간 것이 아닌 이상 확실하게 이상하다.">
+ </map>
+</td>
+</tr>
+<tr><td align="center" style="height:32px;">
+<table width="500" style="background-color: rgba(255,255,255,0.25); border-radius: 10px; border: 1px soild #cecece;">
+<tr><td align="center">
+? 정신을 차려보니 어느새 과학실 안이다. 도대체?
+</td></tr>
+</table>
+</td></tr>
+<tr><td></td></tr>
+</table>
+</body>
+</html>

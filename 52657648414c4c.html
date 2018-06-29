@@ -1,0 +1,85 @@
+<html>
+<head><title>또 다른 복도</title>
+
+<meta charset="UTF-8">
+
+<link type="text/css" rel="stylesheet" href="qtip/jquery.qtip.css">
+<link rel="stylesheet" href="tt.css">
+<link rel="stylesheet" href="animsition.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="qtip/jquery.qtip.js"></script>
+<script type="text/javascript" src="qtip/jquery.imagesloaded.pkg.min.js"></script>
+<script src="animsition.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("area").each(function(index, element) {
+        var link = $(this);
+        $(link).qtip({
+            content: link.attr("alt"), 
+            style: {
+                classes: 'qtip-tipsy qtip-shadow'
+            },   
+            position: {
+                target: 'mouse',
+                adjust: {
+                    mouse: true,
+					x: 15,
+					y: 20
+                }
+            }
+        });
+    });
+
+	$(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+</head>
+<body class="animsition">
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td></td></tr>
+<tr><td align="center" valign="middle" style="height: 550px;">
+<img src="2r.png" border="0" usemap="#Map">
+<map name="Map">
+  <area shape="rect" coords="413,124,589,270" href="52657648414c4c32.html" title="▲앞으로">
+  <area shape="rect" coords="573,0,668,87" title="정체불명의 식물들이 여기저기서 자라고 있다.">
+  <area shape="poly" coords="302,247,298,2,3,2,1,365" title="기분 나쁠 정도로 새까만 어둠이 깨진 창문을 넘어 자라나고 있는 것 같다.">
+  <area shape="rect" coords="458,402,520,449" title="장난감 버스. 걸려 넘어지지 않게 주의하자.">
+  <area shape="rect" coords="591,103,655,399" title="병원에서나 볼 법한 물건이네.">
+  <area shape="rect" coords="392,-8,534,54" title="버스 손잡이는 왜 천장에 달려있는걸까?">
+</map>
+</td>
+</tr>
+<tr><td align="center" style="height:32px;">
+<table width="500" style="background-color: rgba(255,255,255,0.25); border-radius: 10px; border: 1px soild #cecece;">
+<tr><td align="center">
+여기는 대체 어디지? 학교 복도를 닮았지만 전혀 다른 느낌이다.
+</td></tr>
+</table>
+</td></tr>
+<tr><td></td></tr>
+</table>
+</body>
+</html>

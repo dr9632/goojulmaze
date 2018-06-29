@@ -1,0 +1,79 @@
+<html>
+<head><title>교실</title>
+
+<meta charset="UTF-8">
+
+<link type="text/css" rel="stylesheet" href="qtip/jquery.qtip.css">
+<link rel="stylesheet" href="animsition.min.css">
+<link rel="stylesheet" href="tt.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="qtip/jquery.qtip.js"></script>
+<script type="text/javascript" src="qtip/jquery.imagesloaded.pkg.min.js"></script>
+<script src="animsition.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("area").each(function(index, element) {
+        var link = $(this);
+        $(link).qtip({
+            content: link.attr("alt"), 
+            style: {
+                classes: 'qtip-tipsy qtip-shadow'
+            },   
+            position: {
+                target: 'mouse',
+                adjust: {
+                    mouse: true,
+					x: 15,
+					y: 20
+                }
+            }
+        });
+    });
+	$(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+</head>
+<body class="animsition">
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td></td></tr>
+<tr><td align="center" valign="middle" style="height: 550px;">
+<img src="1.png" border="0" usemap="#Map">
+<map name="Map">
+  <area shape="circle" coords="58,57,22" title="시계는 새벽 세시를 가르키고 있다.">
+  <area shape="rect" coords="415,131,545,267" href="hallway.html" target="_top" title="▲복도로">
+  <area shape="rect" coords="369,238,387,255" title="전기가 나간 모양인지 불이 켜지지 않는다.">
+  <area shape="rect" coords="374,336,721,444" title="남의 책상을 뒤지는 건 옳지 않은 일이야.">
+  <area shape="rect" coords="-17,90,269,245" title="적혀있던 글이 사라졌다...">
+</map>
+</td>
+</tr>
+<tr><td align="center" style="height:32px;">
+<strong>HINT |</strong> 교실 밖으로 향한다.
+</td></tr>
+<tr><td></td></tr>
+</table>
+</body>
+</html>

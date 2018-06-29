@@ -1,0 +1,84 @@
+<html>
+<head><title>도서관</title>
+
+<meta charset="UTF-8">
+
+<link type="text/css" rel="stylesheet" href="qtip/jquery.qtip.css">
+<link rel="stylesheet" href="tt.css">
+<link rel="stylesheet" href="animsition.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="qtip/jquery.qtip.js"></script>
+<script type="text/javascript" src="qtip/jquery.imagesloaded.pkg.min.js"></script>
+<script src="animsition.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("area").each(function(index, element) {
+        var link = $(this);
+        $(link).qtip({
+            content: link.attr("alt"), 
+            style: {
+                classes: 'qtip-tipsy qtip-shadow'
+            },   
+            position: {
+                target: 'mouse',
+                adjust: {
+                    mouse: true,
+					x: 15,
+					y: 20
+                }
+            }
+        });
+    });
+
+	$(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+</head>
+<body class="animsition">
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td align="center" valign="bottom">
+</td></tr>
+<tr><td align="center" valign="middle" style="height: 550px;">
+<img src="4.png" border="0" usemap="#Map">
+<map name="Map">
+  <area shape="rect" coords="809,406,957,482" href="hunterstory.html" title="제목이 없는 책이다. 무슨 책이지?">
+  <area shape="rect" coords="904,3,958,278" href="424f4f4b776f726d4c6f77.html" title="우리 학교의 도서관은 마을 내 유일한 도서관이기 때문에 굉장히 큰 편이다. 건물 서쪽에서 2층으로 내려가기 위해서는 도서관 내부의 계단을 이용해야한다.">
+  <area shape="rect" coords="164,5,277,330" title="어두워서 잘 보이지 않는다.">
+  <area shape="rect" coords="280,7,391,336" title="흥미로운 책은 없어보인다.">
+  <area shape="rect" coords="396,6,521,341" title="다른 아이들은 어디쯤 오고 있을까? 정말 이상할 정도로 온 건물이 조용하다.">
+  <area shape="rect" coords="526,7,651,279" title="구절포터와 비밀의 한의원... 음 재미있게 읽었었지.">
+  <area shape="rect" coords="668,9,779,292" title="오래된 책들이 많아서 그런가 종이와 책냄새가 가득하다.">
+  <area shape="rect" coords="791,10,896,264" title="자세히는 안 보이지만 각종 사전과 자료집이 있는 책장같다.">
+</map>
+</td>
+</tr>
+<tr><td align="center" style="height:32px;">
+
+</td></tr>
+<tr><td></td></tr>
+</table>
+</body>
+</html>

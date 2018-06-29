@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>또다른복도</title>
+
+<meta charset="UTF-8">
+
+<link type="text/css" rel="stylesheet" href="qtip/jquery.qtip.css">
+<link rel="stylesheet" href="tt.css">
+<link rel="stylesheet" href="animsition.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="qtip/jquery.qtip.js"></script>
+<script type="text/javascript" src="qtip/jquery.imagesloaded.pkg.min.js"></script>
+<script src="animsition.min.js"></script>
+<script type="text/javascript" src="sound-mouseover.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("area").each(function(index, element) {
+        var link = $(this);
+        $(link).qtip({
+            content: link.attr("alt"), 
+            style: {
+                classes: 'qtip-tipsy qtip-shadow'
+            },   
+            position: {
+                target: 'mouse',
+                adjust: {
+                    mouse: true,
+					x: 15,
+					y: 20
+                }
+            }
+        });
+    });
+
+	$(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+
+ function show(id) {
+    document.getElementById(id).style.visibility = "visible";
+  }
+</script>
+</head>
+<body class="animsition">
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td></td></tr>
+<tr><td align="center" valign="middle" style="height: 550px;">
+<div id="container" style="position: relative; width: 970px; height: 550px;">
+<div id="over" style="position: absolute; top: 100px; left: 30px; z-index: 1; visibility: hidden;">
+<img src="2r-4ov.png" border="0">
+</div>
+<img id="bg" src="2r-4.png" border="0" usemap="#Map">
+<map id="_bg" name="Map">
+  <area shape="rect" coords="413,124,589,270" href="52657648414c4c35.html" title="▲앞으로">
+  <area shape="poly" coords="142,294,132,101,2,105,1,337" title="???" onMouseOver="show('over'); playclip();">
+</map>
+</div>
+</td>
+</tr>
+<tr><td align="center" style="height:32px;">
+<table width="500" style="background-color: rgba(255,255,255,0.25); border-radius: 10px; border: 1px soild #cecece;">
+<tr><td align="center">
+무언가가 창 밖에서 지켜보고 있다. 여긴 3층인데...?
+</td></tr>
+</table>
+</td></tr>
+<tr><td>
+<audio>
+<source src="icu.mp3" >
+</audio>
+<div id="sounddiv"><bgsound id="sound"></div></td></tr>
+</table>
+</body>
+</html>
